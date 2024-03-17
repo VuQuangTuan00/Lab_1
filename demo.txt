@@ -9,7 +9,7 @@ import AssetExample from './components/AssetExample';
 export default function App() {
 function PhepTinh(a,b){
   
-
+// khoi tao bien de gan gia tri vao fun
   let uscln;
   let bscnn;
   if(a>b)
