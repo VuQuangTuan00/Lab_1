@@ -1,0 +1,76 @@
+import { Text, SafeAreaView, StyleSheet } from 'react-native';
+
+// You can import supported modules from npm
+import { Card } from 'react-native-paper';
+
+// or any files within the Snack
+import AssetExample from './components/AssetExample';
+
+export default function App() {
+function PhepTinh(a,b){
+  
+
+  let uscln;
+  let bscnn;
+  if(a>b)
+  {
+    for(i=0;i<=a;i++)
+    {
+       if(a%i==0 && b%i==0)
+       {
+         uscln=i;
+       }
+    }
+  }
+    if(b>a)
+  {
+    for(i=0;i<=b;i++)
+    {
+       if(a%i==0 && b%i==0)
+       {
+         uscln=i;
+       }
+    }
+  }
+let so =a*b;
+for(i=1;i<=so;i++)
+{
+  if(i%a==0&&i%b==0)
+  {
+    bscnn=i;
+    break;
+  }
+}
+
+  let thongbao1=" Uoc so chung lon nhat cua "+a +" va "+b+" la :"+ uscln+"\n";
+   thongbao1 +=" Boi so chung nho nhat cua "+a +" va "+b+" la :"+ bscnn;
+
+ return thongbao1;
+}
+
+return (
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.thongbao1}>
+       {PhepTinh(1,5)}
+      </Text>
+      
+      <Card>
+        <AssetExample />
+      </Card>
+    </SafeAreaView>
+  );
+}
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: '#ecf0f1',
+    padding: 8,
+  },
+  paragraph: {
+    margin: 24,
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+});
